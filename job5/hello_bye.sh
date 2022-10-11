@@ -1,5 +1,10 @@
 #!/bin/sh
-#Author : Alshak 
-#Script is as follows
+if {"if [ "$1" == "Hello" ];then
 
-echo Bonjour, je suis un script !
+	echo "Bonjour"
+
+elif [ "$1" == "Bye" ];then
+	
+	echo "AU revoir"
+
+fi	
