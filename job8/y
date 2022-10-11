@@ -1,0 +1,4 @@
+heure=$(date +%H:%M)
+fichier=number_connection-$jour-$heure.log
+sudo grep accepted /var/log/auth.log >> $fichier && tar -czvf $fichier ./
+mv $fichier.tar.gz /Desktop/shell.exe/job8/Backup
