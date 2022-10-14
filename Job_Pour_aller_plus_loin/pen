@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <title>Alcasar | Intercept</title>
+        <link rel="stylesheet" href="/css/new_css.css" type="text/css">
+					<script type="text/javascript">
+			function doOnLoad(result, userurl, redirurl, adminurl, timeleft) {
+				if ((result === 1) || (result === 4)) {	// success or already
+					var url;
+					if (adminurl !== '') {
+						url = adminurl;
+					} else if (redirurl !== '') {
+						url = redirurl;
+					} else if (userurl !== '') {
+						url = userurl;
+					}
+
+					if (typeof url !== 'undefined') {
+						var win = window.open('https://alcasar.laplateforme.io/status.php', '_blank');
+
+						if ((win === null) || (typeof win === 'undefined')) { // Pop-up blocked
+							window.location = 'https://alcasar.laplateforme.io/status.php';
+						} else {
+							window.location = url;
+						}
+					} else {
+						window.location = 'https://alcasar.laplateforme.io/status.php';
+					}
+				}
+				if ((result === 2) || (result === 3) || result === 5) { // failed or logoff or notyet
+					// document.form1.username.focus();
+				}
+			}
+		</script>
+    </head>
+    <body class="App-LogIn" onLoad="javascript:doOnLoad(1,'','','','')">
+
+        <div class="App-lateral-bar">
+            <img src="/images/logo_alcasar_01.png" class="App-avatar" alt="avatar" />
+            <div class="App-headline">
+                <p>Bienvenue sur <b>Alcasar</b></p>
+            </div>
+            <div class="App-La-Plateforme">
+                <img src="/images/logo_plateforme.svg" class="App-logo" alt="logo" />
+            </div>
+            <p  class="App-Access-Control">Contrôle d'accès</p>
+
+			            <form method="post" action="/intercept.php" class="App-Form">
+				<input type="hidden" name="challenge" value="">
+				<input type="hidden" name="userurl" value="">
+
+                <input class="App-Input" type="text" placeholder="Identifiant" id="username" name="username" autocomplete="off" />
+                <!-- {formik.errors.identifier ? <div class="App-Input-Errors">{formik.errors.identifier}</div> : null} -->
+
+                <input class="App-Input" type="password" placeholder="Mot de passe" id="password"  name="password" autocomplete="off"/>
+                
+                <input value="Authentication" class="App-Button" type="submit" name="button">
+
+
+            </form>
+            <div class="App-Sms-Registration">
+                <a href="/sms_registration.php" class="App-Link">Invité (inscription SMS)</a>
+            </div>
+            <div class="App-Sms-Registration">
+				<a href="/email_registration_front.php" class="App-Link">Nouvel étudiant (Inscription email)</a>
+            </div>
+            <div class="App-Contact-Registration">
+			<div>Un problème ? <a href="mailto:si@laplateforme.io" class="Mail-Link"> si@laplateforme.io</a></div>
+            </div>
+        </div>
+        <div class="App-Header-Wrapper">
+            <header class="App-Header">
+            </header>
+            <main class="App-Body">
+
+                <h5 class="App-News-Title">NEWS</h5>
+				<a href=https://laplateforme.io/2022/09/16/business-solutions-un-evenement-la-plateforme/><article class='App-News-Article'>
+	<p class="thumbnaill"><img width="1080" height="675" src="https://laplateforme.io/wp-content/uploads/2022/09/news-la-plateforme-img1.webp" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" srcset="https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/09/news-la-plateforme-img1.webp?w=1080&amp;ssl=1 1080w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/09/news-la-plateforme-img1.webp?resize=300%2C188&amp;ssl=1 300w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/09/news-la-plateforme-img1.webp?resize=1024%2C640&amp;ssl=1 1024w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/09/news-la-plateforme-img1.webp?resize=768%2C480&amp;ssl=1 768w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/09/news-la-plateforme-img1.webp?resize=610%2C381&amp;ssl=1 610w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/09/news-la-plateforme-img1.webp?resize=400%2C250&amp;ssl=1 400w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/09/news-la-plateforme-img1.webp?resize=980%2C613&amp;ssl=1 980w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/09/news-la-plateforme-img1.webp?resize=480%2C300&amp;ssl=1 480w" sizes="(max-width: 1080px) 100vw, 1080px" /></p>
+	<div class='App-News-Article-Text'>
+		<h4 class='App-News-Article-Title'>Business Solutions, un événement La Plateforme</h4>
+		<p class='App-News-Article-Overview'>
+<p>Oyez, Oyez, entreprises de la Métropole Aix- Marseille ! Le 11 octobre 2022 à 18h, La Plateforme, le campus méditerranéen du numérique, fait sa rentrée 2022 avec une nouvelle offre pour accompagner les entreprises du territoire dans leur transformation numérique ! Venez découvrir notre site de la Joliette, rencontrez l’équipe de direction et les élèves [&hellip;]</p>
+<p>L’article <a rel="nofollow" href="https://laplateforme.io/2022/09/16/business-solutions-un-evenement-la-plateforme/">Business Solutions, un événement La Plateforme</a> est apparu en premier sur <a rel="nofollow" href="https://laplateforme.io">Ecole Informatique La Plateforme</a>.</p>
+</p>
+	</div>
+</article> </a><a href=https://laplateforme.io/2022/09/02/unfinished-live-avec-la-plateforme-a-new-york/><article class='App-News-Article'>
+	<p class="thumbnaill"><img width="1080" height="675" src="https://laplateforme.io/wp-content/uploads/2022/09/unfinished_N.webp" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/09/unfinished_N.webp?w=1080&amp;ssl=1 1080w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/09/unfinished_N.webp?resize=300%2C188&amp;ssl=1 300w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/09/unfinished_N.webp?resize=1024%2C640&amp;ssl=1 1024w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/09/unfinished_N.webp?resize=768%2C480&amp;ssl=1 768w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/09/unfinished_N.webp?resize=610%2C381&amp;ssl=1 610w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/09/unfinished_N.webp?resize=400%2C250&amp;ssl=1 400w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/09/unfinished_N.webp?resize=980%2C613&amp;ssl=1 980w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/09/unfinished_N.webp?resize=480%2C300&amp;ssl=1 480w" sizes="(max-width: 1080px) 100vw, 1080px" /></p>
+	<div class='App-News-Article-Text'>
+		<h4 class='App-News-Article-Title'>Unfinished Live avec La Plateforme à New York !</h4>
+		<p class='App-News-Article-Overview'>
+<p>Unfinished Live est un événement immersif explorant la collision de la technologie, de l&rsquo;art, des idées et de l&rsquo;impact. Rejoignez-nous cet automne alors que ces mondes s&rsquo;unissent dans une expérience en direct axée sur la construction de la prochaine génération d&rsquo;Internet. Avec un programme rempli d&rsquo;interviews, d&rsquo;ateliers et de masterclasses, d&rsquo;expositions interactives, de podcasts en [&hellip;]</p>
+<p>L’article <a rel="nofollow" href="https://laplateforme.io/2022/09/02/unfinished-live-avec-la-plateforme-a-new-york/">Unfinished Live avec La Plateforme à New York !</a> est apparu en premier sur <a rel="nofollow" href="https://laplateforme.io">Ecole Informatique La Plateforme</a>.</p>
+</p>
+	</div>
+</article> </a><a href=https://laplateforme.io/2022/09/02/showcase-des-projets-innovation-lab1-habiter-demain/><article class='App-News-Article'>
+	<p class="thumbnaill"><img width="1080" height="675" src="https://laplateforme.io/wp-content/uploads/2022/09/habiter_news.jpeg" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://laplateforme.io/wp-content/uploads/2022/09/habiter_news.jpeg 1080w, https://laplateforme.io/wp-content/uploads/2022/09/habiter_news-980x613.jpeg 980w, https://laplateforme.io/wp-content/uploads/2022/09/habiter_news-480x300.jpeg 480w" sizes="(min-width: 0px) and (max-width: 480px) 480px, (min-width: 481px) and (max-width: 980px) 980px, (min-width: 981px) 1080px, 100vw" /></p>
+	<div class='App-News-Article-Text'>
+		<h4 class='App-News-Article-Title'>Showcase des projets Innovation Lab#1 “Habiter Demain”</h4>
+		<p class='App-News-Article-Overview'>
+<p>La Plateforme  a le plaisir de vous inviter au Showcase de son InnovationLab#1 “Habiter demain” réalisé en partenariat avec Banque des Territoires le mardi 20 septembre de 9h00 à 12H30. L’occasion de découvrir les résultats finaux des différents terrains d’expérimentation sur lesquels les apprenants ont travaillé pendant 6 mois, les méthodologies déployées au sein du [&hellip;]</p>
+<p>L’article <a rel="nofollow" href="https://laplateforme.io/2022/09/02/showcase-des-projets-innovation-lab1-habiter-demain/">Showcase des projets Innovation Lab#1 “Habiter Demain”</a> est apparu en premier sur <a rel="nofollow" href="https://laplateforme.io">Ecole Informatique La Plateforme</a>.</p>
+</p>
+	</div>
+</article> </a><a href=https://laplateforme.io/2022/09/01/la-plateforme-accueille-le-festival-de-la-ville-sauvage-a-marseille-du-15-au-17-septembre/><article class='App-News-Article'>
+	<p class="thumbnaill"><img width="1080" height="675" src="https://laplateforme.io/wp-content/uploads/2022/09/icade_news.webp" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/09/icade_news.webp?w=1080&amp;ssl=1 1080w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/09/icade_news.webp?resize=300%2C188&amp;ssl=1 300w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/09/icade_news.webp?resize=1024%2C640&amp;ssl=1 1024w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/09/icade_news.webp?resize=768%2C480&amp;ssl=1 768w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/09/icade_news.webp?resize=610%2C381&amp;ssl=1 610w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/09/icade_news.webp?resize=400%2C250&amp;ssl=1 400w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/09/icade_news.webp?resize=980%2C613&amp;ssl=1 980w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/09/icade_news.webp?resize=480%2C300&amp;ssl=1 480w" sizes="(max-width: 1080px) 100vw, 1080px" /></p>
+	<div class='App-News-Article-Text'>
+		<h4 class='App-News-Article-Title'>La Plateforme accueille le Festival de la Ville sauvage à Marseille du 15 au 17 septembre</h4>
+		<p class='App-News-Article-Overview'>
+<p> Du 15 au 17 septembre 2022 le Festival porté par l’association Va Jouer Dehors se déroulera dans les friches du futur Campus de La Plateforme</p>
+<p>L’article <a rel="nofollow" href="https://laplateforme.io/2022/09/01/la-plateforme-accueille-le-festival-de-la-ville-sauvage-a-marseille-du-15-au-17-septembre/">La Plateforme accueille le Festival de la Ville sauvage à Marseille du 15 au 17 septembre</a> est apparu en premier sur <a rel="nofollow" href="https://laplateforme.io">Ecole Informatique La Plateforme</a>.</p>
+</p>
+	</div>
+</article> </a><a href=https://laplateforme.io/2022/07/08/icade-promotion-realisera-la-plateforme-un-campus-numerique-de-25-000-m%c2%b2-a-marseille-13/><article class='App-News-Article'>
+	<p class="thumbnaill"><img width="1080" height="675" src="https://laplateforme.io/wp-content/uploads/2022/07/icade_news2.webp" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/07/icade_news2.webp?w=1080&amp;ssl=1 1080w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/07/icade_news2.webp?resize=300%2C188&amp;ssl=1 300w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/07/icade_news2.webp?resize=1024%2C640&amp;ssl=1 1024w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/07/icade_news2.webp?resize=768%2C480&amp;ssl=1 768w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/07/icade_news2.webp?resize=610%2C381&amp;ssl=1 610w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/07/icade_news2.webp?resize=400%2C250&amp;ssl=1 400w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/07/icade_news2.webp?resize=980%2C613&amp;ssl=1 980w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/07/icade_news2.webp?resize=480%2C300&amp;ssl=1 480w" sizes="(max-width: 1080px) 100vw, 1080px" /></p>
+	<div class='App-News-Article-Text'>
+		<h4 class='App-News-Article-Title'>ICADE PROMOTION réalisera « LA PLATEFORME »,  un campus numérique de 25 000 m² à Marseille</h4>
+		<p class='App-News-Article-Overview'>
+<p>Suite à une consultation lancée en mars dernier, Icade Promotion a été désignée pour réaliser ce campus innovant au sein de la ZAC littoral de l’extension d’Euroméditerranée. Dirigée par l’entrepreneur Cyril Zimmermann, « La Plateforme » est une école du numérique et des nouvelles technologies co-fondée avec le Club Top 20 réunissant les grandes entreprises [&hellip;]</p>
+<p>L’article <a rel="nofollow" href="https://laplateforme.io/2022/07/08/icade-promotion-realisera-la-plateforme-un-campus-numerique-de-25-000-m%c2%b2-a-marseille-13/">ICADE PROMOTION réalisera « LA PLATEFORME »,  un campus numérique de 25 000 m² à Marseille</a> est apparu en premier sur <a rel="nofollow" href="https://laplateforme.io">Ecole Informatique La Plateforme</a>.</p>
+</p>
+	</div>
+</article> </a><a href=https://laplateforme.io/2022/07/05/partenariat-numeum-et-la-plateforme/><article class='App-News-Article'>
+	<p class="thumbnaill"><img width="1080" height="675" src="https://laplateforme.io/wp-content/uploads/2022/07/Numeum2.webp" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/07/Numeum2.webp?w=1080&amp;ssl=1 1080w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/07/Numeum2.webp?resize=300%2C188&amp;ssl=1 300w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/07/Numeum2.webp?resize=1024%2C640&amp;ssl=1 1024w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/07/Numeum2.webp?resize=768%2C480&amp;ssl=1 768w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/07/Numeum2.webp?resize=610%2C381&amp;ssl=1 610w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/07/Numeum2.webp?resize=400%2C250&amp;ssl=1 400w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/07/Numeum2.webp?resize=980%2C613&amp;ssl=1 980w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/07/Numeum2.webp?resize=480%2C300&amp;ssl=1 480w" sizes="(max-width: 1080px) 100vw, 1080px" /></p>
+	<div class='App-News-Article-Text'>
+		<h4 class='App-News-Article-Title'>Numeum signe un nouveau partenariat avec l’école La Plateforme pour renforcer l’éducation et la formation aux métiers du numérique</h4>
+		<p class='App-News-Article-Overview'>
+<p>Dans le cadre de ses relations avec les établissements de formation et dans le but d’élargir le vivier de talents et de compétences disponibles pour les entreprises du secteur numérique situées en région Sud – Provence-Alpes-Côte-D’azur, Numeum annonce aujourd’hui un partenariat avec l’école du numérique La Plateforme à Marseille. Une collaboration pour renforcer la formation [&hellip;]</p>
+<p>L’article <a rel="nofollow" href="https://laplateforme.io/2022/07/05/partenariat-numeum-et-la-plateforme/">Numeum signe un nouveau partenariat avec l’école La Plateforme pour renforcer l’éducation et la formation aux métiers du numérique</a> est apparu en premier sur <a rel="nofollow" href="https://laplateforme.io">Ecole Informatique La Plateforme</a>.</p>
+</p>
+	</div>
+</article> </a><a href=https://laplateforme.io/2022/06/08/oreegami-et-la-plateforme-sassocient-pour-former-les-marseillais-au-marketing-digital/><article class='App-News-Article'>
+	<p class="thumbnaill"><img width="1080" height="675" src="https://laplateforme.io/wp-content/uploads/2022/06/oreegami-cp-visuel-2.webp" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="groupe apprenants Oreegami@LaPlateforme" loading="lazy" srcset="https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/06/oreegami-cp-visuel-2.webp?w=1080&amp;ssl=1 1080w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/06/oreegami-cp-visuel-2.webp?resize=300%2C188&amp;ssl=1 300w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/06/oreegami-cp-visuel-2.webp?resize=1024%2C640&amp;ssl=1 1024w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/06/oreegami-cp-visuel-2.webp?resize=768%2C480&amp;ssl=1 768w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/06/oreegami-cp-visuel-2.webp?resize=610%2C381&amp;ssl=1 610w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/06/oreegami-cp-visuel-2.webp?resize=400%2C250&amp;ssl=1 400w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/06/oreegami-cp-visuel-2.webp?resize=980%2C613&amp;ssl=1 980w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/06/oreegami-cp-visuel-2.webp?resize=480%2C300&amp;ssl=1 480w" sizes="(max-width: 1080px) 100vw, 1080px" /></p>
+	<div class='App-News-Article-Text'>
+		<h4 class='App-News-Article-Title'>Oreegami et La Plateforme s’associent pour former les marseillais au Marketing Digital</h4>
+		<p class='App-News-Article-Overview'>
+<p>Oreegami et La Plateforme s&rsquo;associent pour lancer à Marseille la formation de marketing digital Oreegami@LaPlateforme. Une formation gratuite de 3 mois + 12 mois d’alternance qui permet de valider un bachelor (Bac+3/4). 7,7 Milliards d’euros ont été investis dans la publicité en ligne en 2021 (SRI)! Réseaux Sociaux, Moteurs de recherche, sites de contenus, plateformes [&hellip;]</p>
+<p>L’article <a rel="nofollow" href="https://laplateforme.io/2022/06/08/oreegami-et-la-plateforme-sassocient-pour-former-les-marseillais-au-marketing-digital/">Oreegami et La Plateforme s’associent pour former les marseillais au Marketing Digital</a> est apparu en premier sur <a rel="nofollow" href="https://laplateforme.io">Ecole Informatique La Plateforme</a>.</p>
+</p>
+	</div>
+</article> </a><a href=https://laplateforme.io/2022/05/23/le-bachelor-it-a-la-plateforme-est-lance/><article class='App-News-Article'>
+	<p class="thumbnaill"><img width="1080" height="675" src="https://laplateforme.io/wp-content/uploads/2022/05/News-bachelor.webp" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="Bachelor IT - affiche" loading="lazy" srcset="https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/05/News-bachelor.webp?w=1080&amp;ssl=1 1080w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/05/News-bachelor.webp?resize=300%2C188&amp;ssl=1 300w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/05/News-bachelor.webp?resize=1024%2C640&amp;ssl=1 1024w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/05/News-bachelor.webp?resize=768%2C480&amp;ssl=1 768w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/05/News-bachelor.webp?resize=610%2C381&amp;ssl=1 610w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/05/News-bachelor.webp?resize=400%2C250&amp;ssl=1 400w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/05/News-bachelor.webp?resize=980%2C613&amp;ssl=1 980w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/05/News-bachelor.webp?resize=480%2C300&amp;ssl=1 480w" sizes="(max-width: 1080px) 100vw, 1080px" /></p>
+	<div class='App-News-Article-Text'>
+		<h4 class='App-News-Article-Title'>Le Bachelor IT à La Plateforme est lancé</h4>
+		<p class='App-News-Article-Overview'>
+<p>L’article <a rel="nofollow" href="https://laplateforme.io/2022/05/23/le-bachelor-it-a-la-plateforme-est-lance/">Le Bachelor IT à La Plateforme est lancé</a> est apparu en premier sur <a rel="nofollow" href="https://laplateforme.io">Ecole Informatique La Plateforme</a>.</p>
+</p>
+	</div>
+</article> </a><a href=https://laplateforme.io/2022/05/22/frank-mccourt-a-la-rencontre-des-etudiants-de-linnovation-lab2/><article class='App-News-Article'>
+	<p class="thumbnaill"><img width="1080" height="675" src="https://laplateforme.io/wp-content/uploads/2022/05/mccourt.webp" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/05/mccourt.webp?w=1080&amp;ssl=1 1080w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/05/mccourt.webp?resize=300%2C188&amp;ssl=1 300w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/05/mccourt.webp?resize=1024%2C640&amp;ssl=1 1024w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/05/mccourt.webp?resize=768%2C480&amp;ssl=1 768w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/05/mccourt.webp?resize=610%2C381&amp;ssl=1 610w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/05/mccourt.webp?resize=400%2C250&amp;ssl=1 400w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/05/mccourt.webp?resize=980%2C613&amp;ssl=1 980w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/05/mccourt.webp?resize=480%2C300&amp;ssl=1 480w" sizes="(max-width: 1080px) 100vw, 1080px" /></p>
+	<div class='App-News-Article-Text'>
+		<h4 class='App-News-Article-Title'>Frank McCourt à la rencontre des étudiants de l’Innovation Lab#2</h4>
+		<p class='App-News-Article-Overview'>
+<p>Frank McCourt est venu visiter l’Innovation Lab#2, Web3: Building the Social Networks of Tomorrow, un projet conjoint entre Project Liberty &amp; La Plateforme Il est venu discuter des prototypes avec les étudiants de La Plateforme, qui seront présentés à #Unfinished Live plus tard cette année. Frank McCourt s&rsquo;est entretenu avec les étudiants pour répondre à [&hellip;]</p>
+<p>L’article <a rel="nofollow" href="https://laplateforme.io/2022/05/22/frank-mccourt-a-la-rencontre-des-etudiants-de-linnovation-lab2/">Frank McCourt à la rencontre des étudiants de l’Innovation Lab#2</a> est apparu en premier sur <a rel="nofollow" href="https://laplateforme.io">Ecole Informatique La Plateforme</a>.</p>
+</p>
+	</div>
+</article> </a><a href=https://laplateforme.io/2022/05/21/mardis-de-la-tech-ux-rendez-vous-le-24-avril-a-la-plateforme/><article class='App-News-Article'>
+	<p class="thumbnaill"><img width="1080" height="675" src="https://laplateforme.io/wp-content/uploads/2022/05/News-mardi-Tech-Post-eventbrite.webp" class="attachment-post-thumbnail size-post-thumbnail wp-post-image" alt="" loading="lazy" srcset="https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/05/News-mardi-Tech-Post-eventbrite.webp?w=1080&amp;ssl=1 1080w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/05/News-mardi-Tech-Post-eventbrite.webp?resize=300%2C188&amp;ssl=1 300w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/05/News-mardi-Tech-Post-eventbrite.webp?resize=1024%2C640&amp;ssl=1 1024w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/05/News-mardi-Tech-Post-eventbrite.webp?resize=768%2C480&amp;ssl=1 768w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/05/News-mardi-Tech-Post-eventbrite.webp?resize=610%2C381&amp;ssl=1 610w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/05/News-mardi-Tech-Post-eventbrite.webp?resize=400%2C250&amp;ssl=1 400w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/05/News-mardi-Tech-Post-eventbrite.webp?resize=980%2C613&amp;ssl=1 980w, https://i0.wp.com/laplateforme.io/wp-content/uploads/2022/05/News-mardi-Tech-Post-eventbrite.webp?resize=480%2C300&amp;ssl=1 480w" sizes="(max-width: 1080px) 100vw, 1080px" /></p>
+	<div class='App-News-Article-Text'>
+		<h4 class='App-News-Article-Title'>Mardis de la Tech & UX, rendez-vous le 24 avril à La Plateforme</h4>
+		<p class='App-News-Article-Overview'>
+<p>« Les Mardis de la Tech » accueille Tristan Roger de Kirk Agency à La Plateforme ! Qu&rsquo;est ce que c&rsquo;est que l&rsquo;UX ? L’acronyme “UX” vient de l’expression anglaise “User eXperience” (expérience utilisateur). L’expérience utilisateur se définit par le ressenti de l’utilisateur lors de son interaction avec un produit, un service ou un objet. De ce [&hellip;]</p>
+<p>L’article <a rel="nofollow" href="https://laplateforme.io/2022/05/21/mardis-de-la-tech-ux-rendez-vous-le-24-avril-a-la-plateforme/">Mardis de la Tech &#038; UX, rendez-vous le 24 avril à La Plateforme</a> est apparu en premier sur <a rel="nofollow" href="https://laplateforme.io">Ecole Informatique La Plateforme</a>.</p>
+</p>
+	</div>
+</article> </a><br />            </main>
+        </div>
+    </body>
+</html>
